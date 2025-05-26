@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor YouTube → Áudio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-blue-500 to-purple-600 min-h-screen flex items-center justify-center">
+
+    <div class="bg-white rounded-2xl shadow-lg p-8 max-w-md w-full">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">
+            🎧 YouTube → Áudio
+        </h1>
+
+        <form action="/download" method="post" class="space-y-4">
+            <div>
+                <label class="block text-gray-700 font-semibold mb-1">URL do vídeo:</label>
+                <input type="text" name="url" required placeholder="Cole a URL do vídeo"
+                       class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-semibold mb-1">Formato:</label>
+                <select name="format" required
+                        class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="mp3">MP3</option>
+                    <option value="wav">WAV</option>
+                    <option value="aac">AAC</option>
+                    <option value="ogg">OGG</option>
+                </select>
+            </div>
+
+            <button type="submit"
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                Converter e Baixar
+            </button>
+        </form>
+
+        <p class="mt-6 text-center text-sm text-gray-500">
+            ©️ 2025 Projeto para estudos. 
+        <br></br>
+        Respeite os direitos autorais.
+        </p>
+    </div>
+
+</body>
+</html>
+<script>
+
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'blue-500': '#3b82f6',
+                    'blue-600': '#2563eb',
+                    'purple-600': '#7c3aed',
+                },
+            },
+        },
+    };
